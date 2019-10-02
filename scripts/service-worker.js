@@ -1,5 +1,6 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
 
+const appName = "44-563-group-4-pwa"
 //makes sure worker file is connected
 console.log('Hello from service-worker.js');
 
@@ -43,4 +44,27 @@ workbox.routing.registerRoute(
     ],
   })
 );
+
+workbox.routing.setCatchHandler(({ event }) => {
+  console.error(`Error: ${event.error}`)
+  return Response.error()
+})
+
+/**
+* Attach install handler that will cache critical files
+*/
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(`${appName}-static`)
+      .then(cache => {
+        console.log(`Workbox got content from cache ${appName}-static `)
+        return cache.addAll([
+          '.',
+          'index.html',
+          'scripts/main.js'
+        ])
+      })
+      .catch(error => { console.error(`Error in install event: ${error} `) })
+  )
+})
 
