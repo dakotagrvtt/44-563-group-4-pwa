@@ -1,9 +1,11 @@
 {
     "name": "PWA - Group 4",
     "short_name": "PWA",
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "start_url": "./index.html",
     "display": "standalone",
+    "theme_color": "#ffcc4d",
+    "background_color": "#ffffff",
+    "orientation": "portrait",
     "description": "Functional Progressive Web App for Workshop Presentation by Group 4 in 44-563-01",
     "author": {
         "name": "Group 4",
