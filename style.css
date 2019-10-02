@@ -11,6 +11,11 @@ p{
     padding-left: 2em
 }
 
+img{
+    width: 100%;
+    height: auto;
+}
+
 .tabbed{
     margin-left: 3em;
 }
