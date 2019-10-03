@@ -39,6 +39,7 @@
     </ol>
     <article class="col-sm-11">
       <div class="row">
+        <!-- SERVICE WORKER -->
         <section class="col-md-6">
           <h3 id="service">Service Worker</h3>
           <p>
@@ -54,16 +55,17 @@
             Service workers run seperately from the webpage (AKA the main thread) and requires HTTPS on the host server
             to run as it must intercept and alter network requests. It may also run on the localhost.
           </p>
-          <img src="./images/serviceworker.JPG" title="service-worker.js example" alt="Service worker example">
           <p>
-            Service workers must be registered first so the browser will know where the service-worker is.
+            Service workers must be registered first so the browser will know where the service-worker is however.
           </p>
-          <img src="./images/serviceworker-registration.JPG" title="service-worker registeration" alt="Service worker registeration">
+          <img src="./images/serviceworker-registration.PNG" title="Service Worker registeration"
+            alt="Service Worker registeration">
           <p>
             More about the service worker can be found <a
               href="https://developers.google.com/web/fundamentals/primers/service-workers">here.</a>
           </p>
         </section>
+        <!-- WORKBOX -->
         <section class="col-md-6">
           <h3 id="workbox">Workbox</h3>
           <p>
@@ -72,8 +74,10 @@
               library</a>.
           </p>
           <img src="./images/workbox-import.JPG" title="Import code example" alt="Workbox import example">
-          <p>Workbox's main feature that makes PWA developement easier is it allows you to listen and respond to
-            requests from your webpage using the <i> routing</i> and <i>strategies</i> modules.</p>
+          <p>Workbox's main feature that makes it so useful for PWA developement is it allows you to listen and respond
+            to requests from your webpage using the <i>routing</i> and <i>strategies</i> modules. These make caching
+            and scheduling cache updates easier.</p>
+          <img src="./images/serviceworker.JPG" title="Workbox in action" alt="Workbox example">
           <p>To learn more about Workbox, check out their documentation <a
               href="https://developers.google.com/web/tools/workbox">here.</a></p>
         </section>
@@ -83,7 +87,11 @@
           <p>A simple JSON file which tells the browser about your web application and how it should behave when
             installed on a device.</p>
           <p>Data can include the name of the app, it's description, what page opens when the app is
-            launched(start_url), icon color, and favicon file destinations.</p>
+            launched(start_url), application icon color, and favicon file destinations.</p>
+          <p>Favicons will be used on all devices, so to accomodate them, you should use sites like <a
+              href="https://www.favicon.io">Favicon.io</a> or <a href="https://www.favicon-generator.org/">Favicon
+              Generator</a> to automatically generate the neccessary sized icons and manifest JSON. These icons may be
+            used in places like browser tabs and phone or desktop home screens.</p>
           <img src="./images/manifest.JPG" alt="Manifest example" title="manifest.json example">
           <p>
             More about the manifest can be found <a
