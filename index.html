@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PWA - Group 4</title>
   <!-- BOOTSTRAP -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -12,7 +13,7 @@
   <meta name="description" content="Functional Progressive Web App for Workshop Presentation by Group 4 in 44-563-01">
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-  <title>PWA - Group 4</title>
+
   <!-- ICONS & MANIFEST-->
   <link rel="icon" href="./images/favicon/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/ios/apple-icon-180x180.png">
@@ -30,16 +31,14 @@
 
 <body>
   <main class="container-fluid">
-    <article class="col-sm-10">
+    <h3>What you need to build a PWA</h3>
+    <ol>
+      <li><a href="#service">Service Worker</a></li>
+      <li><a href="#workbox">Workbox</a></li>
+      <li><a href="#manifest">Manifest</a></li>
+    </ol>
+    <article class="col-sm-11">
       <div class="row">
-        <section class="col-md-6">
-          <h3>What you need to build a Progressive Web App</h3>
-          <ol>
-            <li><a href="#service">Service Worker</a></li>
-            <li><a href="#workbox">Workbox</a></li>
-            <li><a href="#manifest">Manifest</a></li>
-          </ol>
-        </section>
         <section class="col-md-6">
           <h3 id="service">Service Worker</h3>
           <p>
@@ -52,29 +51,52 @@
             <li>File caching</li>
           </ol>
           <p>
-            Service workers run seperately from the webpage (AKA the main thread) and require HTTPS to run as it must
-            intercept and sometimes alter network requests.
+            Service workers run seperately from the webpage (AKA the main thread) and requires HTTPS on the host server
+            to run as it must intercept and alter network requests. It may also run on the localhost.
+          </p>
+          <img src="./images/serviceworker.JPG" title="service-worker.js example" alt="Service worker example">
+          <p>
+            Service workers must be registered first so the browser will know where the service-worker is.
+          </p>
+          <img src="./images/serviceworker-registration.JPG" title="service-worker registeration" alt="Service worker registeration">
+          <p>
+            More about the service worker can be found <a
+              href="https://developers.google.com/web/fundamentals/primers/service-workers">here.</a>
           </p>
         </section>
         <section class="col-md-6">
           <h3 id="workbox">Workbox</h3>
           <p>
-            After registering your Service Worker, the user can import Google's own Workbox JS library.
+            After registering your Service Worker, the user can import Google's own <a
+              href="https://developers.google.com/web/tools/workbox/guides/get-started#importing_workbox">Workbox JS
+              library</a>.
           </p>
-          <img src="./images/workbox-import.JPG">
+          <img src="./images/workbox-import.JPG" title="Import code example" alt="Workbox import example">
+          <p>Workbox's main feature that makes PWA developement easier is it allows you to listen and respond to
+            requests from your webpage using the <i> routing</i> and <i>strategies</i> modules.</p>
+          <p>To learn more about Workbox, check out their documentation <a
+              href="https://developers.google.com/web/tools/workbox">here.</a></p>
         </section>
+        <!-- MANIFEST -->
         <section class="col-md-6">
           <h3 id="manifest">Manifest</h3>
           <p>A simple JSON file which tells the browser about your web application and how it should behave when
             installed on a device.</p>
           <p>Data can include the name of the app, it's description, what page opens when the app is
             launched(start_url), icon color, and favicon file destinations.</p>
+          <img src="./images/manifest.JPG" alt="Manifest example" title="manifest.json example">
+          <p>
+            More about the manifest can be found <a
+              href="https://developers.google.com/web/fundamentals/web-app-manifest/">here.</a>
+          </p>
         </section>
       </div>
     </article>
   </main>
-  <footer><a href="https://dakotagrvtt.github.io/44-563-group-4-pwa/">Demo</a> - <a
-      href="https://github.com/dakotagrvtt/44-563-group-4-pwa">GitHub</a></footer>
+  <hr>
+  <footer class="container-fluid centered"><a href="https://dakotagrvtt.github.io/44-563-group-4-pwa/">Demo</a> - <a
+      href="https://github.com/dakotagrvtt/44-563-group-4-pwa">GitHub</a>
+  </footer>
 </body>
 
 <!-- CUSTOM JAVASCRIPT -->

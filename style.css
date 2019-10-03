@@ -1,3 +1,7 @@
+html{
+    min-height: 250px;
+}
+
 header{
     font-size: 1.5em;
     padding: 1em;
@@ -12,10 +16,22 @@ p{
 }
 
 img{
+    padding-left: 2em;
     width: 100%;
     height: auto;
 }
 
+footer{
+    font-weight: 700;
+    margin-top: 0.25em;
+    padding: 2em;
+    background-color: rgb(208, 214, 238);
+}
+
 .tabbed{
     margin-left: 3em;
+}
+
+.centered{
+    text-align: center;
 }
