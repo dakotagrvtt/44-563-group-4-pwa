@@ -5,4 +5,4 @@
 3. Justin Folkerts [GitHub Profile](https://github.com/jfolkerts)
 4. Dakota Gravitt [GitHub Profile](https://github.com/dakotagrvtt/)
 
-![Group Slide](groupSlide.png)
+![Team Slide](teamSlide.png)
