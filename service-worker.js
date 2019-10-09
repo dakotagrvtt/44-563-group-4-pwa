@@ -60,8 +60,10 @@ self.addEventListener('install', event => {
         console.log(`Workbox got content from cache ${appName}-static `)
         return cache.addAll([
           '.',
-          'index.html',
-          'scripts/main.js'
+          './index.html',
+          './scripts/main.js',
+          './style.css'
+          ''
         ])
       })
       .catch(error => { console.error(`Error in install event: ${error} `) })
